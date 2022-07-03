@@ -4,100 +4,100 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>UserPortal-Sign Up!</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="">
-	</head>
-	<body>
-		<p>Please Sign Up to continue!</p>
-		<form action="/signup" method="POST">
-			{% csrf_token %}
-			{%for message in messages%}
-			<strong>{{message}}</strong>
-			{%endfor%}
-			<label for="">Username:</label>
-			<input type="text" name="username" Required/>
-			<label for="">Firstname:</label>
-			<input type="text" name="fname" Required/>
-			<label for="">Lastname:</label>
-			<input type="text" name="lname" Required/>
-			{% comment %} <label for="">Phone Number:</label>
-			<input type="Number" name="PhNo" Required/> {% endcomment %}
-			<label for="">Email:</label>
-			<input type="text" name="email" Required/>
-			<label for="">Password:</label>
-			<input type="password" name="pass1" Required/>
-			<label for="">Confirm Password:</label>
-			<input type="password" name="pass2" Required/>
-			<br>
-			<button type="submit">Sign up</button>
-		</form>
-		<style>
-			body{
-				background-color:grey;
-				
-			}
-			p{
-				font-size:20px;
-				text-align:center;
-				margin-top:100px;
-				font-weight:bold;
-			}
-			form{
-				width:300px;
-				border: 2px solid black;
-				border-radius:15px;
-				padding:20px;
-				margin-top:30px;
-				margin-right:auto;
-				margin-left:auto;
-				background-color:#c2c2d6;
-			}
-			form *{
-				margin-right:auto;
-				margin-left:auto;
-			}
-			form label{
-				display:flex;
-				font-size:20px;
-				margin-bottom:5px;
-				font-weight:bold;
-
-			}
-			form input{
-				display:flex;
-				border-radius:10px;
-				font-weight:bold;
-				padding:7px;
-
-			}
-			form button{
-				display:flex;
-				border-radius:5px;
-				width:80px;
-				font-size:14px;
-				justify-content:center;
-				transition:60ms;
-				font-weight:bold;
-
-			}
-			form button:hover{
-				cursor:pointer;
-				width:100px;
-				font-size:18px;
-			}
-			form button a:link{
-				text-decoration:none;
-			}
-			form button a{
-				color:black;
-			}
-			
-		</style>
-		<script src="" async defer></script>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UserPortal-Sign Up!</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <p>Please Sign Up to continue!</p>
+    <form action="/signup" method="POST">
+      {% csrf_token %} {%for message in messages%}
+      <strong>{{message}}</strong>
+      {%endfor%}
+      <label for="">Username:</label>
+      <input type="text" name="username" required />
+      <label for="">Firstname:</label>
+      <input type="text" name="first_name" required />
+      <label for="">Lastname:</label>
+      <input type="text" name="last_name" required />
+      {% comment %} <label for="">Phone Number:</label>
+      <input type="Number" name="PhNo" required /> {% endcomment %}
+      <label for="">Email:</label>
+      <input type="text" name="email" required />
+      <label for="">Password:</label>
+      <input type="password" name="password1" required />
+      <label for="">Confirm Password:</label>
+      <input type="password" name="password2" required />
+      <br />
+      <button type="submit">Sign up</button>
+    </form>
+	<br>
+	<center><div>
+		<label>Already have an account?</label>
+        <button id="button1"><a href="/signin">Sign in!</a></button>
+		
+	</div></center>
+    <style>
+      body {
+        background-color: #acf9b0;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 100px;
+        font-weight: bold;
+      }
+      form {
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: #52d65a;
+      }
+      form * {
+        margin-right: auto;
+        margin-left: auto;
+      }
+      form label {
+        display: flex;
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      form input {
+        display: flex;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 7px;
+      }
+      form button {
+        display: flex;
+        border-radius: 5px;
+        width: 80px;
+        font-size: 14px;
+        justify-content: center;
+        transition: 60ms;
+        font-weight: bold;
+      }
+      form button:hover {
+        cursor: pointer;
+        width: 100px;
+        font-size: 18px;
+      }
+      button a:link {
+        text-decoration: none;
+      }
+      button a {
+        color: black;
+      }
+    </style>
+    <script src="" async defer></script>
+  </body>
 </html>
