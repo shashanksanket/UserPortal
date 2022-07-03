@@ -41,9 +41,7 @@ Steps to Run my WebApp:-
   10. Now Upload something by clicking on upload file! and Upload it.
   
   ![Screenshot (304)](https://user-images.githubusercontent.com/40575030/177054870-f3f1c118-9e0b-4f7e-9c3f-7054026d184e.png)
-  
-  ![Screenshot (304)](https://user-images.githubusercontent.com/40575030/177054894-7c2ff64b-7953-461e-b82a-27a74a76112d.png)
-  
+    
   11. Now You can see Your file is uploaded now you can download it by clicking on file name.
   
   ![Screenshot (306)](https://user-images.githubusercontent.com/40575030/177054943-4fa72b2e-2a7c-477e-8d89-e43d2ad4e671.png)
@@ -68,7 +66,7 @@ Steps to Run my WebApp:-
         
         14.1.4  Sign Up!.
        
-      14.2 In the body e have 4 Features:-
+      14.2 In the body we have 4 Features:-
         
         14.2.1 Table of File types which has a file type and a number showing the count of files uploaded of that particular file type.
         
