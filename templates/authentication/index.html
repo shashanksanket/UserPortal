@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UserPortal-SignIn!</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <p class="user">
+              {%if user.is_authenticated%}
+              Hello {{user.first_name}}!</p>
+              {%endif%}
+          </li>
+          <li>
+            <form action="" method="POST">
+              {% csrf_token %}
+            <button id="btn1" class="btn"><a class="link" href="/signout">Signout!</a></button></li>
+            </form>
+          </ul>
+      </div>
+    </nav>
+    <h2><center>Welcome to User Portal</center></h2>
+    <div>
+
+      <form action="/list" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <center><div class="upload">
+        <h4>Upload your file here</h4>
+        <input type="file" value="file" name='filee'></input>
+        <button class="btn" type="submit">Upload</button>
+        </div>
+      </center>
+      </form>
+    </div>
+    <div class="Files-uploaded">
+      
+      {% if documents %}
+      <table border='2'>
+        <tr>
+          <th>FileName</th>
+          <th>FileType</th>
+          <th>DateUploaded</th>
+        </tr>
+        {% for document in documents %}
+        <tr>
+          <td><a href={% url 'download_file' document.file.id %} >{{ document.file.name }}</a></td>
+          <td>{{document.file_type}}</td>
+          <td>{{document.date_uploaded}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% else %}
+      <p>No documents.</p>
+  {% endif %}
+    </div>
+    <style>
+      .user{
+        position:absolute;
+        right:120px;
+        top:15px;
+      }
+      .upload *{
+        
+        margin-top:30px;
+      }
+      #btn1{
+        position:absolute;
+        right:20px;
+      }
+      h2{
+        margin-top:30px;
+      }
+      table{
+        margin-top:100px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+    </style>
+
+    <script src="" async defer></script>
+  </body>
+</html>

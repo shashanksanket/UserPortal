@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>UserPortal-Sign In!</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<h1><center>Welcome to UserPortal!</center></h1>
+		<form action="/signin" method="POST">
+			{% csrf_token %}
+			<div id="div1">
+			{%for message in messages%}
+			<strong>{{message}}</strong>
+			{%endfor%}
+			<label id="label1" for="" >Username:</label>
+			<input id="input1" type="text" name="username" Requiered/>
+			<br>
+			<label id="label2" for="">Password:</label>
+			<input id="input2" type="password" name="pass1" Requiered/>
+			<br>
+			<button id="button1" type="submit">Sign in!</button>
+			<br>
+			</div>
+			<div id="div2">
+			<label id="label3">Don't have a account?</label>
+			<button id="button2"><a href="/signup">Sign Up!</a></button>
+			</div>
+		</form>
+		<style>
+			body{
+				background-color:grey;
+				
+			}
+			h1{
+				font-size:60px;
+			}
+			form{
+				width:300px;
+				border: 2px solid black;
+				border-radius:15px;
+				padding:20px;
+				margin-top:130px;
+				margin-right:auto;
+				margin-left:auto;
+				background-color:#c2c2d6;
+			}
+			form *{
+				margin-right:auto;
+				margin-left:auto;
+			}
+			form label{
+				display:flex;
+				font-size:20px;
+				margin-bottom:5px;
+				font-weight:bold;
+
+			}
+			form input{
+				display:flex;
+				border-radius:10px;
+				font-weight:bold;
+				padding:7px;
+
+			}
+			form button{
+				display:flex;
+				border-radius:5px;
+				width:80px;
+				font-size:14px;
+				justify-content:center;
+				transition:60ms;
+				font-weight:bold;
+
+			}
+			form button:hover{
+				cursor:pointer;
+				width:100px;
+				font-size:18px;
+			}
+			form button a:link{
+				text-decoration:none;
+			}
+			form button a{
+				color:black;
+			}
+			
+		</style>
+		<script src="" async defer></script>
+	</body>
+</html>
