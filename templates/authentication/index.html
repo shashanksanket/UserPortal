@@ -92,7 +92,7 @@
         </tr>
         {% for document in documents %}
         <tr>
-          <td><a href={% url 'download_file' document.file.id %} >{{ document.file.name }}</a></td>
+          <td><a href="{% url 'download_file' document.id %}" >{{ document.file.name }}</a></td>
           <td>{{document.file_type}}</td>
           <td>{{document.date_uploaded}}</td>
         </tr>

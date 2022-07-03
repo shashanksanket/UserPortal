@@ -8,7 +8,7 @@ urlpatterns = [
     path('signin',views.signin,name='signin'),
     path('signout',views.signout,name='signout'),
     path('list',views.list,name='list'),
-    path('download_file/<int:pk>',views.download,name='download_file'),
+    path('download_file/<int:pk>/',views.download,name='download_file'),
     
     # path('index',views.index,name='index'),
     
