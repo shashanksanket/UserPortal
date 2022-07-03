@@ -5,9 +5,13 @@ Steps to Run my WebApp:-
   2. Open it in your IDE.
 
   3. Run the following commands:-
+  
     3.1. python manage.py createsuperuser #create superuser and write the username and password in the next steps.
+    
     3.2. python manage.py makemigrations
+    
     3.3. python manage.py migrate
+    
     3.4. pyhton manage.py runserver
     
   4. After writing above code you will get a IP address for the server, Click on it.
@@ -53,16 +57,25 @@ Steps to Run my WebApp:-
   ![Screenshot (309) (1)](https://user-images.githubusercontent.com/40575030/177055070-979c9247-7b08-4e5c-96b3-e815bbe14b68.png)
   
  ** 14. Features:-
+      
       14.1. Navbar:-It contains 4 Things
+        
         14.1.1. Navbar logo.
+        
         14.1.2. Tabs to navigate.
+        
         14.1.3. Sign In!.
+        
         14.1.4  Sign Up!.
        
       14.2 In the body e have 4 Features:-
+        
         14.2.1 Table of File types which has a file type and a number showing the count of files uploaded of that particular file type.
+        
         14.2.2 Total number of users showing number of users are there in our site.
+        
         14.2.3 Total files uploaded by all the users.
+        
         14.2.4 A table showing the names of the user and there number of uploaded files**
 
 
